@@ -5,7 +5,12 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+host = os.getenv("host")
+port = os.getenv("port")
+dbname = os.getenv("dbname")
+user = os.getenv("user")
 password = os.getenv("password")
+
 
 data = []
 
@@ -19,10 +24,10 @@ with open('source\\source.csv', mode = 'r') as csvfile:
 data = data[1:]
 
 with psycopg.connect(
-    host="localhost",
-    port=5432,
-    dbname="postgres",
-    user="postgres",
+    host=host,
+    port=port,
+    dbname=dbname,
+    user=user,
     password=password,
 ) as connection:
 
