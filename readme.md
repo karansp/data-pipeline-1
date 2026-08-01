@@ -2,4 +2,4 @@ This pipeline extracts data from a csv file using python's inbuilt capability to
 
 It then loads it into a postgres table. 
 
-This pipeline is idempotent.
+This pipeline is idempotent. it is implemented using merge statements
