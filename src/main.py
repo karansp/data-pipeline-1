@@ -1,7 +1,7 @@
 from loguru import logger
-from db.pg_connection import *
-from config.config import *
-from pipeline.pipeline import *
+from db.pg_connection import pgConnection
+from config.config import pg_config
+from pipeline.pipeline import run_pipeline
 
 
 logger.info("main file is running")
