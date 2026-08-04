@@ -16,6 +16,7 @@ class pgConnection:
             )
         except Exception as e:
             logger.info(f"error connecting to the pg database: {e}")
+            raise Exception
 
         logger.info("successfully connected to the pg database")
         return pg_connection
